@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,700;1,9..144,700&display=swap");
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-gray: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --paragraph-font-size: 14px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--cream);
+}
+
+.product_card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+.product_card__image {
+  background: url("./images/image-product-desktop.jpg") center no-repeat;
+  background-size: cover;
+  border-radius: inherit;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.product_card__details {
+  padding: 20px 30px;
+  font-size: var(--paragraph-font-size);
+  color: rgba(108, 114, 137, 0.6);
+}
+.product_card__details .category {
+  letter-spacing: 5px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.product_card__details .title {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 35px;
+  line-height: 35px;
+}
+.product_card__details .description {
+  font-weight: 700;
+  line-height: 150%;
+}
+.product_card__details .price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Fraunces", sans-serif;
+}
+.product_card__details .price .old {
+  text-decoration: line-through;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.product_card__details .price .new {
+  color: var(--dark-cyan);
+  font-weight: 700;
+  font-size: 30px;
+}
+.product_card__details .add-to-cart {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--white);
+}
+.product_card__details .add-to-cart svg {
+  vertical-align: middle;
+  margin: 0 10px;
+}
+@media all and (max-width: 768px) {
+  .product_card {
+    margin: 0 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .product_card__image {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-height: 250px;
+  }
+  .product_card__details {
+    padding: 1.3em;
+  }
+}/*# sourceMappingURL=styles.css.map */
